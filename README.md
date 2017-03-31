@@ -1,2 +1,2 @@
 # python-utils
-Useful functions in python
+Useful Python functions
