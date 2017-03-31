@@ -64,6 +64,12 @@ class SubListCase(unittest.TestCase):
         expected = [6, 7, 8, 9, 10, 11, 12]
         self.assertEqual(sublist(full_list, index, quantity), expected)
 
+        full_list = [6, 7, 8, 9, 10,]
+        index = 2
+        quantity = 9
+        expected = [6, 7, 8, 9, 10,]
+        self.assertEqual(sublist(full_list, index, quantity), expected)
+
 
 def sublist(full_list, index, quantity):
 
@@ -85,7 +91,7 @@ def sublist(full_list, index, quantity):
         return []
 
     _sublist = []
-    cont = quantity
+    cont = quantity if quantity <= len_list else len_list
 
     _sublist.append(full_list[index])
     cont -= 1
